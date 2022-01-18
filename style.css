@@ -1,0 +1,75 @@
+/*
+Theme Name: Minerva
+Theme URI: https://jameskoster.design
+Author: jameskoster
+Author URI: ttps://jameskoster.design
+Description: Minerva
+Requires at least: 5.8
+Tested up to: 5.9
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: minerva
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments
+
+Minerva is distributed under the terms of the GNU GPL.
+*/
+
+/*
+ * Font smoothing.
+ * This is a niche setting that will not be available via Global Styles.
+ * https://github.com/WordPress/gutenberg/issues/35934
+ */
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	border: 32px solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(to bottom right, var(--wp--preset--color--green), var(--wp--preset--color--blue));
+	background-image: url(assets/images/texture.png);
+	background-size: 50%;
+	background-attachment: fixed;
+}
+
+/*
+ * Text link styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+a {
+	text-decoration: none;
+	color: var(--wp--preset--color--green);
+	font-weight: 500;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+	text-decoration-thickness: 0px;
+	text-underline-offset: 0.25ch;
+}
+
+/*
+ * Search and File Block button styles.
+ * Necessary until the following issues are resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/36444
+ * https://github.com/WordPress/gutenberg/issues/27760
+ */
+
+.wp-block-search__button,
+.wp-block-file .wp-block-file__button {
+	background-color: var(--wp--preset--color--primary);
+	border-radius: 0;
+	border: none;
+	color: var(--wp--preset--color--background);
+	font-size: var(--wp--preset--typography--font-size--normal);
+	padding: calc(.667em + 2px) calc(1.333em + 2px);
+}
+
+.wp-block-file a.wp-block-file__button:hover {
+	opacity: 1;
+}

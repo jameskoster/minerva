@@ -1,0 +1,20 @@
+{
+	"name": "minerva",
+	"version": "1.0.0",
+	"description": "description",
+	"main": "index.js",
+	"author": "WordPress",
+	"license": "GPL-2.0-or-later",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jameskoster/minerva.git"
+	},
+	"homepage": "https://jameskoster.design",
+	"devDependencies": {
+		"@wordpress/stylelint-config": "^19.1.0",
+		"stylelint": "^13.13.1"
+	},
+	"scripts": {
+		"lint:css": "stylelint **/*.css --fix -i .gitignore"
+	}
+}
